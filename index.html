@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test</title>
-</head>
-<body>
-  <h1>test</h1>
-  <ul>
-    <li><a href="home.html">Home</a></li>
-  </ul>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellcome to my world</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="btn open_btn"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="nav nav-black">
+      <div class="nav nav-red">
+        <div class="nav nav-white">
+          <button class="btn close_btn">
+            <i class="fa-solid fa-times"></i>
+          </button>
+
+          <ul class="list">
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Life at Netflix</a></li>
+            <li>
+              <ul>
+                <li><a href="#">Netflix culture memo</a></li>
+                <li><a href="#">Work life balance</a></li>
+                <li><a href="#">Inclusion &amp; diversity</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <a href="" target="_blank" class="btn randomBtn" id="randomBtn">
+      Click to random page
+    </a>
+
+    <script src="index.js"></script>
+  </body>
 </html>

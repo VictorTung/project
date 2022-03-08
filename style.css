@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.open_btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-black {
+  width: 60%;
+  height: 100vh;
+  max-width: 400px;
+  min-width: 200px;
+  background-color: black;
+  transition-delay: 0.4s;
+}
+
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  width: 95%;
+  height: 100%;
+  background-color: red;
+  transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+  transition-delay: 0.2s;
+}
+
+.nav-white {
+  width: 95%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  padding: 30px;
+  transition-delay: 0s;
+}
+
+.nav-white.visible {
+  transition-delay: 0.4s;
+}
+
+.close_btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  margin: 20px 0;
+}
+
+.list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.list ul {
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.randomBtn {
+  color: lightcoral;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 30px;
+}
