@@ -20,16 +20,19 @@ function changeConsumption(idx) {
   ) {
     idx--
   }
-  cups[idx].classList.remove('filled')
-  cups.forEach((cup, idx2) => {
-    if (idx >= idx2) {
-      cup.classList.add('filled')
-    } else {
-      cup.classList.remove('filled')
-    }
-  })
-  update()
+  if (idx == 0 && !cups[1].classList.contains('filled')) {
+  } else {
+    cups.forEach((cup, idx2) => {
+      if (idx >= idx2) {
+        cup.classList.add('filled')
+      } else {
+        cup.classList.remove('filled')
+      }
+    })
+  }
 }
+update()
+
 
 function update() {
   const total = cups.length
@@ -51,6 +54,4 @@ function update() {
     remained.style.visibility = 'visible'
     liter.innerText = `${2 - (consumpted * 250 / 1000)}L`
   }
-
-
 }

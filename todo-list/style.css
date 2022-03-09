@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-image: linear-gradient(to right, #fff 0%, silver 100%);
+}
+
+h1 {
+  font-size: 80px;
+  color: purple;
+  opacity: 0.3;
+}
+
+.container {
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 400px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  font-size: 30px;
+  padding: 20px 30px;
+} 
+
+.input:focus{
+  outline: purple 1px solid;
+}
+
+.todo {
+  font-size: 25px;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-top: 1px solid gray;
+}
+
+.todo.done{
+  text-decoration: line-through;
+}
+
+small{
+  color: gray;
+  opacity: 0.7;
+  max-width: 200px;
+  text-align: center;
+  line-height: 2;
+  margin-top: 40px;
+}

@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #673769;
+  --secondary-color: #4b222b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--secondary-color);
+}
+
+form {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+form.active{
+  background-color: var(--primary-color);
+}
+
+.search {
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: blueviolet;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--secondary-color);
+}
+
+#main {
+  margin-top: 85px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie {
+  background-color: var(--primary-color);
+  width: 300px;
+  margin: 0 25px 35px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-title {
+  font-size: 25px;
+  font-size: bold;
+}
+
+.movie .rating{
+  background-color: var(--secondary-color);
+  font-size: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.movie .rating.green{
+  color: green;
+}
+
+.movie .rating.orange{
+  color: orange;
+}
+
+.movie .rating.red{
+  color: red;
+}
+
+.overview{
+  background-color: #fff;
+  padding: 30px 20px;
+  transition: ease 0.3s all;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  max-height: 100%;
+  width: 100%;
+}
+
+.movie:hover .overview{
+  transform: translateY(0);
+}
+
+.overview h3{
+  font-size: 25px;
+  margin: 0 0 20px;
+}
+
+.overview p {
+  font-size: 20px;
+}

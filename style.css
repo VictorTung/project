@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --first-color: #fff;
+  --second-color: lightcoral;
+  --third-color: #333;
+}
+
+html.dark {
+  --first-color: #333;
+  --second-color: lightcoral;
+  --third-color: #fff;
+}
+
 body {
   font-family: sans-serif;
   height: 100vh;
@@ -10,6 +22,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--first-color);
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -21,6 +35,7 @@ body {
   border: 0;
   font-size: 30px;
   cursor: pointer;
+  color: var(--third-color);
 }
 
 .open_btn {
@@ -46,7 +61,7 @@ body {
   height: 100vh;
   max-width: 400px;
   min-width: 200px;
-  background-color: black;
+  background-color: var(--third-color);
   transition-delay: 0.4s;
 }
 
@@ -57,7 +72,7 @@ body {
 .nav-red {
   width: 95%;
   height: 100%;
-  background-color: red;
+  background-color: var(--second-color);
   transition-delay: 0.2s;
 }
 
@@ -68,7 +83,7 @@ body {
 .nav-white {
   width: 95%;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--first-color);
   position: relative;
   padding: 30px;
   transition-delay: 0s;
@@ -87,15 +102,20 @@ body {
 .list {
   list-style: none;
   padding: 0;
+  color: var(--third-color);
 }
 
 .list li {
   margin: 20px 0;
 }
 
+.list ul li {
+  margin: 20px 20px;
+}
+
 .list li a {
   text-decoration: none;
-  color: #000;
+  color: var(--third-color);
 }
 
 .list ul {
@@ -105,9 +125,36 @@ body {
 }
 
 .randomBtn {
-  color: lightcoral;
-  background-color: #333;
+  color: var(--second-color);
+  background-color: var(--third-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 30px;
+  transition: 0.3s ease all;
+}
+
+html.dark .randomBtn {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.mode-trigger{
+  position: absolute;
+  top: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: var(--second-color);
+  background-color: var(--third-color);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+html.dark .mode-trigger {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.mode-trigger:active{
+  transform: scale(0.98);
 }
